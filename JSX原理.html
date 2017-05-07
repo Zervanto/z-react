@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSX原理</title>
+</head>
+<body>
+<div>
+    <h1 class="title">Zervanto</h1>
+</div>
+<!--每个 DOM 元素的结构都可以用 JavaScript 的对象来表示-->
+<!--一个 DOM 元素包含的信息其实只有三个：标签名，属性，子元素-->
+<script>
+//    所谓的 JSX 其实就是 JavaScript 对象
+    import React, { Component } from 'react'
+    import ReactDOM from 'react-dom'
+    import './index.css'
+
+    class Header extends Component {
+        render () {
+            return (
+                React.createElement(
+                    "div",
+                    null,
+                    React.createElement(
+                        "h1",
+                        { className: 'title' },
+                        "Zervanto"
+                    )
+                )
+            )
+        }
+    }
+
+    ReactDOM.render(
+        React.createElement(Header, null),
+        document.getElementById('root')
+    );
+</script>
+</body>
+</html>
