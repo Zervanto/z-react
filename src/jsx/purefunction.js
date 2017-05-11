@@ -7,12 +7,13 @@ function pureFn(state){
     //2.返回原来的state
     // return state
 }
-function store(){
-    let state = {
+   let state = {
         aaa:{name:'Zervanto'},
         bbb:{group:'javascript'},
         ccc:{age:23}
     }
+function store(){
+
     const keys = Object.keys(updaters);
     keys.forEach(key=>{
         let updater= updaters[key];
