@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import { connect } from './react-redux-diy.js'
+import { connect } from 'react-redux'
 
 class Header extends Component {
   static propTypes = {
@@ -8,7 +8,7 @@ class Header extends Component {
 
   render () {
     return (
-      <h1 style={{ color: this.props.themeColor }}>React.js 小书</h1>
+      <h1 style={{ color: this.props.themeColor }}>Zervanto</h1>
     )
   }
 }

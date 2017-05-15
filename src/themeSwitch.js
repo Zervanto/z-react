@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import { connect } from './react-redux-diy.js'
+import { connect } from 'react-redux'
 
 class ThemeSwitch extends Component {
   static propTypes = {
@@ -18,7 +18,7 @@ class ThemeSwitch extends Component {
       <div>
         <button
           style={{ color: this.props.themeColor }}
-          onClick={this.handleSwitchColor.bind(this, 'red')}>Red</button>
+          onClick={this.handleSwitchColor.bind(this, '#555')}>Grey</button>
         <button
           style={{ color: this.props.themeColor }}
           onClick={this.handleSwitchColor.bind(this, 'blue')}>Blue</button>

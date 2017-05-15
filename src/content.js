@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import ThemeSwitch from './themeSwitch.js'
-import { connect } from './react-redux-diy.js'
+import { connect } from 'react-redux'
 
 class Content extends Component {
   static propTypes = {
@@ -10,7 +10,7 @@ class Content extends Component {
   render () {
     return (
       <div>
-        <p style={{ color: this.props.themeColor }}>React.js 小书内容</p>
+        <p style={{ color: this.props.themeColor }}>hello react-redux!</p>
         <ThemeSwitch />
       </div>
     )
